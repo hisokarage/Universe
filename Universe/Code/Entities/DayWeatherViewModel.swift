@@ -6,4 +6,67 @@
 //  Copyright © 2019 Andrey Maksymov. All rights reserved.
 //
 
-import Foundation
+import UIKit
+import SDWebImage
+
+private let imagesUrlString = "https://darksky.net/images/weather-icons/"
+private let imagesExtensionString = ".png"
+
+class DayWeatherViewModel {
+    private var dayWeather: DayWeather
+    
+    init(_ newDayWeather: DayWeather) {
+        dayWeather = newDayWeather
+    }
+    
+    func configureCell(_ cell: WeatherCell) {
+    
+        cell.minTempLabel.text = minTempString
+        cell.maxTempLabel.text = maxTempString
+        cell.windSpeedLabel.text = windSpeedString
+        cell.imageView.sd_setImage(with: iconUrl)
+        cell.summaryLabel.text = summary
+        cell.dateLabel.text = stringDate
+    }
+    
+    var maxTempString: String {
+        return "\(maxTemp) C"
+    }
+    
+    var minTempString: String {
+        return "\(minTemp) C"
+    }
+    
+    var windSpeedString: String {
+        guard let windSpeed = dayWeather.windSpeed else {
+            return ""
+        }
+        return "\(windSpeed) km/h"
+    }
+    
+    var iconUrl: URL? {
+        guard let icon = dayWeather.icon, let url = URL(string: "\(imagesUrlString)\(icon)\(imagesExtensionString)") else {
+            return nil
+        }
+        return url
+    }
+    
+    var stringDate: String {
+        guard let date = dayWeather.date else {
+            return ""
+        }
+        return date.stringFromDate()
+    }
+    
+    var summary: String {
+        return dayWeather.summary ?? ""
+    }
+    
+    var maxTemp: Int {
+        return dayWeather.maxTemp ?? 0
+    }
+    
+    var minTemp: Int {
+        return dayWeather.minTemp ?? 0
+    }
+}
