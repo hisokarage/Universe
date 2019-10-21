@@ -59,16 +59,21 @@ extension WeatherGraphViewController : GKLineGraphDataSource {
         return temps.count
     }
     
-    func colorForLine(at index: Int) -> UIColor! {
+    func colorForLine(at index: Int) -> UIColor {
         let colors = [UIColor(rgb: 0xF30C12, alpha: 1.0), UIColor.gk_midnightBlue()]
-        return colors[index]
+        
+        if let color = colors[index] {
+            return color
+        }
+        
+        return UIColor.gk_midnightBlue()
     }
     
-    func valuesForLine(at index: Int) -> [Any]! {
+    func valuesForLine(at index: Int) -> [Any] {
         return temps[index]
     }
     
-    func titleForLine(at index: Int) -> String! {
+    func titleForLine(at index: Int) -> String {
         return dates[index]
     }
 }

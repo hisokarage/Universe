@@ -27,7 +27,7 @@ DEPENDENCIES:
   - SDWebImage
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - AlamofireObjectMapper
     - Bond
@@ -53,4 +53,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 76a806ecd99ae48d0e917423c028a3d6f044577b
 
-COCOAPODS: 1.7.4
+COCOAPODS: 1.8.4

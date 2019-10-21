@@ -20,6 +20,8 @@
 		B266274323461ABA002C7A89 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B266274223461ABA002C7A89 /* WeatherViewModel.swift */; };
 		B266274523461AE3002C7A89 /* DayWeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B266274423461AE2002C7A89 /* DayWeatherViewModel.swift */; };
 		B266274823461B49002C7A89 /* WeatherRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = B266274723461B49002C7A89 /* WeatherRemote.swift */; };
+		B2873689235DD4870008509F /* UniverseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2873688235DD4870008509F /* UniverseTests.swift */; };
+		B2873693235DD4D70008509F /* TestWeatherRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2873692235DD4D60008509F /* TestWeatherRemote.swift */; };
 		B2A827DF2346141C00A25AF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A827DE2346141C00A25AF3 /* AppDelegate.swift */; };
 		B2A827E52346141D00A25AF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2A827E42346141D00A25AF3 /* Assets.xcassets */; };
 		B2A827E82346141D00A25AF3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2A827E72346141D00A25AF3 /* Preview Assets.xcassets */; };
@@ -27,6 +29,16 @@
 		B2A827F52346147000A25AF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2A827F42346147000A25AF3 /* Main.storyboard */; };
 		F3214405461DFDB7D90520A2 /* Pods_Universe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1442690247AEF57CA8CB2FB7 /* Pods_Universe.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B287368B235DD4870008509F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2A827D32346141C00A25AF3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2A827DA2346141C00A25AF3;
+			remoteInfo = Universe;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1442690247AEF57CA8CB2FB7 /* Pods_Universe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Universe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +56,10 @@
 		B266274223461ABA002C7A89 /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
 		B266274423461AE2002C7A89 /* DayWeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayWeatherViewModel.swift; sourceTree = "<group>"; };
 		B266274723461B49002C7A89 /* WeatherRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRemote.swift; sourceTree = "<group>"; };
+		B2873686235DD4870008509F /* UniverseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UniverseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2873688235DD4870008509F /* UniverseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniverseTests.swift; sourceTree = "<group>"; };
+		B287368A235DD4870008509F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2873692235DD4D60008509F /* TestWeatherRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWeatherRemote.swift; sourceTree = "<group>"; };
 		B2A827DB2346141C00A25AF3 /* Universe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Universe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2A827DE2346141C00A25AF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2A827E42346141D00A25AF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -55,6 +71,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B2873683235DD4870008509F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B2A827D82346141C00A25AF3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -160,10 +183,21 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		B2873687235DD4870008509F /* UniverseTests */ = {
+			isa = PBXGroup;
+			children = (
+				B2873688235DD4870008509F /* UniverseTests.swift */,
+				B2873692235DD4D60008509F /* TestWeatherRemote.swift */,
+				B287368A235DD4870008509F /* Info.plist */,
+			);
+			path = UniverseTests;
+			sourceTree = "<group>";
+		};
 		B2A827D22346141C00A25AF3 = {
 			isa = PBXGroup;
 			children = (
 				B2A827DD2346141C00A25AF3 /* Universe */,
+				B2873687235DD4870008509F /* UniverseTests */,
 				B2A827DC2346141C00A25AF3 /* Products */,
 				063DF5D2275CD122E2DE2795 /* Pods */,
 				D2D95487B3132BA4D9FB5278 /* Frameworks */,
@@ -174,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				B2A827DB2346141C00A25AF3 /* Universe.app */,
+				B2873686235DD4870008509F /* UniverseTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -210,6 +245,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B2873685235DD4870008509F /* UniverseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B287368F235DD4870008509F /* Build configuration list for PBXNativeTarget "UniverseTests" */;
+			buildPhases = (
+				B2873682235DD4870008509F /* Sources */,
+				B2873683235DD4870008509F /* Frameworks */,
+				B2873684235DD4870008509F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B287368C235DD4870008509F /* PBXTargetDependency */,
+			);
+			name = UniverseTests;
+			productName = UniverseTests;
+			productReference = B2873686235DD4870008509F /* UniverseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		B2A827DA2346141C00A25AF3 /* Universe */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B2A827EF2346141D00A25AF3 /* Build configuration list for PBXNativeTarget "Universe" */;
@@ -235,10 +288,14 @@
 		B2A827D32346141C00A25AF3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1100;
+				LastSwiftUpdateCheck = 1110;
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Andrey Maksymov";
 				TargetAttributes = {
+					B2873685235DD4870008509F = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = B2A827DA2346141C00A25AF3;
+					};
 					B2A827DA2346141C00A25AF3 = {
 						CreatedOnToolsVersion = 11.0;
 					};
@@ -258,11 +315,19 @@
 			projectRoot = "";
 			targets = (
 				B2A827DA2346141C00A25AF3 /* Universe */,
+				B2873685235DD4870008509F /* UniverseTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B2873684235DD4870008509F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B2A827D92346141C00A25AF3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -319,6 +384,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B2873682235DD4870008509F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2873693235DD4D70008509F /* TestWeatherRemote.swift in Sources */,
+				B2873689235DD4870008509F /* UniverseTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B2A827D72346141C00A25AF3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -342,6 +416,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		B287368C235DD4870008509F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B2A827DA2346141C00A25AF3 /* Universe */;
+			targetProxy = B287368B235DD4870008509F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		B2A827E92346141D00A25AF3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -354,6 +436,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		B287368D235DD4870008509F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4X774D5AWV;
+				INFOPLIST_FILE = UniverseTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kek.UniverseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Universe.app/Universe";
+			};
+			name = Debug;
+		};
+		B287368E235DD4870008509F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4X774D5AWV;
+				INFOPLIST_FILE = UniverseTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kek.UniverseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Universe.app/Universe";
+			};
+			name = Release;
+		};
 		B2A827ED2346141D00A25AF3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -513,6 +637,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B287368F235DD4870008509F /* Build configuration list for PBXNativeTarget "UniverseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B287368D235DD4870008509F /* Debug */,
+				B287368E235DD4870008509F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B2A827D62346141C00A25AF3 /* Build configuration list for PBXProject "Universe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
