@@ -16,16 +16,11 @@ private let baseWeatherUrl = "https://api.darksky.net/forecast/\(APIKey)/\(kievk
 
 public class WeatherRemote  {
     private static var sharedWRemote: WeatherRemote = {
-        let sharedRemoteMgr = WeatherRemote(baseURL: URL(string: "https://api.fleetwatcher.com")!)
+        let sharedRemoteMgr = WeatherRemote()
         
         return sharedRemoteMgr
     }()
-    
-    let baseURL: URL
-    
-    private init(baseURL: URL) {
-        self.baseURL = baseURL
-    }
+    private init() {}
     
     class func shared() -> WeatherRemote {
         return sharedWRemote

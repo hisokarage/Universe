@@ -40,7 +40,7 @@ class TestWeatherRemote: XCTestCase {
     
     
 //    func testDayWeatherInitialization() {
-//        
+//
 //        let sampleJSON = [
 //                  "time" : "2019-10-20 21:00:00 +0000",
 //                  "temperatureMin": 5,
@@ -49,9 +49,9 @@ class TestWeatherRemote: XCTestCase {
 //                  "summary": "Kiev",
 //                  "windSpeed": 2
 //            ] as [String : Any]
-//        
+//
 //        let weather = Mapper<DayWeather>().map(JSON: sampleJSON)
-//        
+//
 //        XCTAssertEqual(weather?.minTemp, 5)
 //        XCTAssertEqual(weather?.maxTemp, 17)
 //        XCTAssertEqual(weather?.icon, "fog")
