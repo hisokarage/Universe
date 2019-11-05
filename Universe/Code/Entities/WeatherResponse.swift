@@ -8,12 +8,6 @@
 
 import ObjectMapper
 
-enum PeriodDuration : Int {
-    case days3 = 3;
-    case days5 = 5;
-    case week = 7
-}
-
 class WeatherResponse: Mappable {
     
     var timeZone: String?

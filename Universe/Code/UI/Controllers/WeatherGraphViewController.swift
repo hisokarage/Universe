@@ -40,7 +40,7 @@ class WeatherGraphViewController: UIViewController {
         let location = sender.location(in: graphView)
         let width = graphView.bounds.size.width
         
-        if let firstLabel = graphView.subviews[0] as? UILabel, let lastLabel = graphView.subviews[weathers.count - 1] as? UILabel { // gets date labels positions to find margins
+        if let firstLabel = graphView.subviews.first as? UILabel, let lastLabel = graphView.subviews.last as? UILabel { // gets date labels positions to find margins
             let leftMargin = firstLabel.frame.origin.x
             let rightMargin = width - (lastLabel.frame.origin.x + lastLabel.frame.size.width)
             let sectorWidth = (width - (leftMargin + rightMargin)) / CGFloat(weathers.count)

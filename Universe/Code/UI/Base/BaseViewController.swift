@@ -10,8 +10,8 @@ import UIKit
 
 class BaseViewController: UIViewController {
     
-    private var loader = UIActivityIndicatorView()
-    private var loaderView = UIView()
+    private var loader: UIActivityIndicatorView?
+    private var loaderView: UIView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,17 +20,12 @@ class BaseViewController: UIViewController {
     
     // MARK: - Error
     
-    func showAlert(withError error: Error?, orMessage message: String?, externalAction: UIAlertAction?) {
+    func showAlert(withErrorMessage message: String, externalAction: UIAlertAction?) {
         
         loading = false
         
-        let alert = UIAlertController(title: "Error", message: nil, preferredStyle: .alert)
-        if let wrappedError = error {
-            alert.message = wrappedError.localizedDescription
-        }
-        if let wrappedMessage = message {
-            alert.message = wrappedMessage
-        }
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        
         if let action = externalAction {
             alert.addAction(action)
         } else {
@@ -43,8 +38,8 @@ class BaseViewController: UIViewController {
     // MARK: - Loader
     var loading = false {
         didSet {
-            loaderView.isHidden = !loading
-            loading ? loader.startAnimating() : loader.stopAnimating()
+            loaderView?.isHidden = !loading
+            loading ? loader?.startAnimating() : loader?.stopAnimating()
         }
     }
 }

@@ -17,6 +17,15 @@ class WeatherCell: UICollectionViewCell {
     @IBOutlet weak var windSpeedLabel: UILabel!
     @IBOutlet weak var summaryLabel: UILabel!
     
+    func configureCell(withDayWeather dayWeatherVM: DayWeatherViewModel) {
+        minTempLabel.text = dayWeatherVM.minTempString
+        maxTempLabel.text = dayWeatherVM.maxTempString
+        windSpeedLabel.text = dayWeatherVM.windSpeedString
+        imageView.sd_setImage(with: dayWeatherVM.iconUrl)
+        summaryLabel.text = dayWeatherVM.summary
+        dateLabel.text = dayWeatherVM.stringDate
+    }
+    
     override var isSelected: Bool {
         didSet {
             backgroundColor = isSelected ? UIColor(rgb: 0xadd8e6, alpha: 1.0) : .white

@@ -36,7 +36,8 @@ extension WeatherListViewController : UICollectionViewDelegate, UICollectionView
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WeatherCell", for: indexPath) as! WeatherCell
         
-        weathers[indexPath.row].configureCell(cell)
+        let dayWeather = weathers[indexPath.row]
+        cell.configureCell(withDayWeather: dayWeather)
         
         return cell
     }

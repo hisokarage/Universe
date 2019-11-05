@@ -15,11 +15,8 @@ private let kievkCoords = "50.2716,30.3125"
 private let baseWeatherUrl = "https://api.darksky.net/forecast/\(APIKey)/\(kievkCoords)"
 
 public class WeatherRemote  {
-    private static var sharedWRemote: WeatherRemote = {
-        let sharedRemoteMgr = WeatherRemote()
-        
-        return sharedRemoteMgr
-    }()
+    private static var sharedWRemote = WeatherRemote()
+    
     private init() {}
     
     class func shared() -> WeatherRemote {

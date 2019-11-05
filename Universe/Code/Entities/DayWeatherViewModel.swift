@@ -19,16 +19,6 @@ class DayWeatherViewModel {
         dayWeather = newDayWeather
     }
     
-    func configureCell(_ cell: WeatherCell) {
-    
-        cell.minTempLabel.text = minTempString
-        cell.maxTempLabel.text = maxTempString
-        cell.windSpeedLabel.text = windSpeedString
-        cell.imageView.sd_setImage(with: iconUrl)
-        cell.summaryLabel.text = summary
-        cell.dateLabel.text = stringDate
-    }
-    
     var maxTempString: String {
         return "\(maxTemp) C"
     }

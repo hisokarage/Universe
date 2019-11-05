@@ -9,10 +9,16 @@
 import UIKit
 import Bond
 
+enum PeriodDuration : Int {
+    case days3 = 3;
+    case days5 = 5;
+    case week = 7
+}
+
 class WeatherViewModel {
     let weather = Observable<WeatherResponse?>(nil)
     let dayWeathers = Observable<[DayWeatherViewModel]>([])
-    let error = Observable<Error?>(nil)
+    let error = Observable<String?>(nil)
     let isFetching = Observable<Bool>(false)
     
     func fetch(forPeriod period: PeriodDuration) {
@@ -28,7 +34,7 @@ class WeatherViewModel {
         guard let strongSelf = self else { return }
             DispatchQueue.main.async {
                 strongSelf.isFetching.value = false
-                strongSelf.error.value = error
+                strongSelf.error.value = error.localizedDescription
             }
         }
     }

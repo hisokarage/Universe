@@ -44,7 +44,7 @@ class HomeViewController: BaseViewController {
         }
     }
     
-// MARK: - Actions
+    // MARK: - Actions
     @IBAction func onSegment(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 1:
@@ -72,11 +72,11 @@ extension HomeViewController {
         }
         
         weatherViewModel.error.bind(to: self) { (strongSelf, error) in
-            if error != nil {
+            if let wrappedError = error {
                 let retryAction = UIAlertAction(title: "Retry", style: .destructive) { _ in
                     strongSelf.weatherViewModel.fetch(forPeriod: strongSelf.currentPeriod)
                 }
-                strongSelf.showAlert(withError: error, orMessage: nil, externalAction: retryAction)
+                strongSelf.showAlert(withErrorMessage: wrappedError, externalAction: retryAction)
             }
         }
         
